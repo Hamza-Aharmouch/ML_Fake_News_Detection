@@ -1,0 +1,35 @@
+
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Search</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="searching text" type="text" [(ngModel)]="search">
+
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <div class="container" *ngFor="let new of newss">
+    <div class="container-fluid ">
+        <mat-card>
+            
+                <h2 >{{ new.node.title }}</h2>
+                <h4>{{ new.node.details }}</h4>
+        
+        </mat-card>
+    
+  </div>
+
+
+
+

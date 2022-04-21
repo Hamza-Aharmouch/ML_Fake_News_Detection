@@ -1,0 +1,87 @@
+<div class="grid-container">
+
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile  [colspan]=2 [rowspan]=1>
+      <mat-card class="dashboard-card">  
+
+        <mat-card-header>
+          <mat-card-title>
+              <span> Cleaning Text </span>
+            <div > 
+            
+                          
+              <mat-form-field appearance="outline" style="width: 720%; height:250px;">
+                <mat-label>Text area</mat-label>
+                <textarea matInput type="text" [(ngModel)]="NLP_Textarea" cdkTextareaAutosize cdkAutosizeMinRows="6" cdkAutosizeMaxRows="6"></textarea>
+              </mat-form-field>
+              <button button mat-raised-button (click)="onclick_NLP()">Execute</button>
+              <div class="div_answer" *ngFor="let new of NLP_return">
+                <h3>{{new.cleanData.data.text}}</h3>
+              </div>
+              
+            </div>
+          </mat-card-title>
+        </mat-card-header>
+
+      </mat-card>
+      
+    </mat-grid-tile>
+
+    <mat-grid-tile  [colspan]=2 [rowspan]=1>
+        <mat-card class="dashboard-card">  
+
+          <mat-card-header>
+            <mat-card-title>
+              <span> L'analyse des sentiments dans un texte</span>
+              <div > 
+              
+                            
+                <mat-form-field appearance="outline" style="width: 436%; height:250px;">
+                  <mat-label>Text area</mat-label>
+                  <textarea matInput type="text" [(ngModel)]="Sentiment_Textarea" cdkTextareaAutosize cdkAutosizeMinRows="6" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+                <button button mat-raised-button (click)="onclick_Sentiment()">Execute</button>
+                <div class="div_answer" *ngFor="let fel of Sentiment_return">
+                  <h3>Les sentiments dans ce texte sont : {{fel.analyseData.data.text}}</h3>
+                </div>
+                
+              </div>
+            </mat-card-title>
+          </mat-card-header>
+
+        </mat-card>
+        
+    </mat-grid-tile>
+
+
+
+    <mat-grid-tile  [colspan]=2 [rowspan]=1>
+        <mat-card class="dashboard-card">  
+
+          <mat-card-header>
+            <mat-card-title>
+            <span> Detection fake news utilisant Naive Bayes / SVM</span>
+              <div > 
+                        
+                <mat-form-field appearance="outline" style="width: 347%; height:250px;">
+                  <mat-label>Text area</mat-label>
+                  <textarea matInput type="text" [(ngModel)]="NewsDetect_Textarea" cdkTextareaAutosize cdkAutosizeMinRows="6" cdkAutosizeMaxRows="6"></textarea>
+                </mat-form-field>
+                <button button mat-raised-button (click)="onclick_NewsDetect()">Execute</button>
+                <div class="div_answer" *ngFor="let yet of NewsDetect_return">
+                  <h3>{{yet.detectNews.data.text}}</h3>
+                </div>
+                
+              </div>
+            </mat-card-title>
+          </mat-card-header>
+
+        </mat-card>
+        
+    </mat-grid-tile>
+
+
+
+
+  </mat-grid-list>
+</div>

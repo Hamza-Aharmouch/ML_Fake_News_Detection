@@ -1,0 +1,21 @@
+.container-fluid{
+    background-color: #e8fcfb;
+    height: 150px;
+    width: 90%;
+    margin: auto;
+    border: 5px solid #00203FFF;
+    padding: 10px 10px 20px 20px;
+    align-items: center;
+    position: relative;
+    top :5%;
+    bottom: 10%;
+ 
+  }
+
+  .container{
+    padding: 10px 10px 20px 20px;
+    align-items: center;
+    position: relative;
+    top :3%;
+    bottom: 10%;
+  }

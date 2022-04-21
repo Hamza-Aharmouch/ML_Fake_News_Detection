@@ -1,0 +1,74 @@
+.full-width {
+  width: 100%;
+}
+
+.shipping-card {
+  width: 90%;
+  min-width: 110px;
+  margin: 20px auto;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  background-color: #e8fcfb;
+}
+
+.mat-radio-button {
+  display: block;
+  margin: 5px 0;
+  
+}
+.mat-raised-button{
+  background-color: #00203FFF;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.col:last-child {
+  margin-right: 0;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: #00203FFF !important;
+ }
+
+ ::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: black !important;
+} 
+
+::ng-deep.mat-form-field-ripple {
+ /*change color of underline when focused*/
+ background-color: black !important;;
+}
+
+.container-fluid{
+  background-color: #e8fcfb;
+  height: 150px;
+  width: 90%;
+  margin: auto;
+  border: 5px solid #00203FFF;
+  padding: 10px 10px 20px 20px;
+  align-items: center;
+  position: relative;
+  top :5%;
+  bottom: 10%;
+
+}
+
+.container{
+  padding: 10px 10px 20px 20px;
+  align-items: center;
+  position: relative;
+  top :3%;
+  bottom: 10%;
+}
